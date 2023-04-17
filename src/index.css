@@ -1,0 +1,55 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+
+:root {
+
+  /*=========== Color ===========*/
+  --color-bg: aliceblue;
+  --color-white: rgba(255, 255, 255, 0.9);
+  --color-black: rgb(39, 39, 39);
+  --color-red1: rgb(196, 43, 43);
+  --color-red2: rgb(180, 47, 47);
+
+  /*=========== Devices Width ===========*/
+  --lg-container-width: 80%;
+  --md-container-width: 90%;
+  --sm-container-width: 96%;
+
+  /*=========== Transition ===========*/
+  --transition: all 400ms ease-in-out;
+
+
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-black);
+  line-height: 1.5;
+  font-family: Nunito;
+
+}
+
+.container {
+  margin: 0 auto;
+  width: var(--lg-container-width);
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+section {
+  padding: 5rem 0;
+}

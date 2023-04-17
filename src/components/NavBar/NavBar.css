@@ -1,0 +1,34 @@
+nav {
+    height: 4rem;
+    width: 100vw;
+    position: sticky;
+    top: 0;
+    left: 0;
+    display: grid;
+    place-items: center;
+    background-color: whitesmoke;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+
+}
+
+.nav__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.nav__links a {
+    font-weight: 700;
+    transition: var(--transition);
+}
+
+.nav__links a.active {
+    border-bottom: 5px solid var(--color-red2);
+}
