@@ -1,0 +1,76 @@
+.signin__main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+}
+
+.signin__container h1 {
+    text-align: center;
+    margin: 2rem 0 3rem;
+}
+
+.signin__right form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+input {
+    padding: 1rem 1.5rem;
+    font-family: inherit;
+    box-shadow: 0 0 2px rgb(218, 218, 218);
+    border-radius: 8px;
+}
+
+.pass__group {
+    position: relative;
+}
+
+.eye {
+    position: absolute;
+    top: 50%;
+
+}
+
+/* .eyefill {
+    cursor: pointer;
+    right: 1rem;
+} */
+
+.btn-s {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: rgb(71, 118, 204);
+    border-radius: 8px;
+    color: white;
+    font-family: inherit;
+
+}
+
+.btn-google {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-radius: 8px;
+    color: white;
+    background-color: rgb(204, 71, 71);
+
+}
+
+.reg__fpass {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* .or */
+
+
+
+@media screen and (max-width: 34em) {
+
+
+    .signin__main {
+        grid-template-columns: 1fr;
+    }
+
+}

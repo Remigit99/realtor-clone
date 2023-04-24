@@ -5,19 +5,23 @@ import './Signin.css'
 import GoogleOauth from '../components/GoogleOauth'
 import { Link } from 'react-router-dom'
 
-const SignIn = () => {
+const SignUp = () => {
 
     const [formData, setFormData] = useState({
-        email: " "
+        name: "",
+        email: " ",
+        password: " "
     })
 
-    const { email } = formData;
+    const { name, email, password } = formData;
 
     const inputChange = (e) => {
         setFormData(prev => ({
             ...prev, [e.target.id]: e.target.value
         }))
     }
+
+    const [showPassword, setShowPassword] = useState(false);
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -36,14 +40,22 @@ const SignIn = () => {
 
                     <div className="signin__right">
                         <form onSubmit={handleSubmit}>
+                            <input type="text" name="name" id="name" placeholder='Full Name address' value={name} onChange={inputChange} />
+
                             <input type="email" name="email" id="email" placeholder='Email address' value={email} onChange={inputChange} />
 
-                            <button type="submit"> RESET PASSWORD</button>
+                            <div className="pass__group">
+                                <input type={showPassword ? "text" : "password"}
+                                    name="password" id="password" placeholder='Password' value={password} onChange={inputChange} />
+                                {/* Eyefill__icon */}
+                            </div>
+
+                            <button type="submit"> SIGN UP</button>
 
                             <div className="reg__fpass">
                                 <p>
-                                    <span>Don't have an account?</span>
-                                    <Link to="/sign-up">Register</Link>
+                                    <span>Have an account?</span>
+                                    <Link to="/sign-in">Sign In</Link>
                                 </p>
 
                                 <Link to="/forget-password" />
@@ -57,8 +69,6 @@ const SignIn = () => {
 
                         </form>
 
-
-
                     </div>
                 </div>
             </div>
@@ -66,4 +76,4 @@ const SignIn = () => {
     )
 }
 
-export default SignIn
+export default SignUp;
