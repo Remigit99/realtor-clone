@@ -18,8 +18,9 @@
 input {
     padding: 1rem 1.5rem;
     font-family: inherit;
-    box-shadow: 0 0 2px rgb(218, 218, 218);
+    box-shadow: 0 0 4px rgb(218, 218, 218);
     border-radius: 8px;
+    width: 100%;
 }
 
 .pass__group {
@@ -44,16 +45,23 @@ input {
     border-radius: 8px;
     color: white;
     font-family: inherit;
+    cursor: pointer;
+    transition: var(--transition);
+}
 
+.btn-s:hover,
+.btn-google:hover {
+    opacity: 0.9;
 }
 
 .btn-google {
+    transition: var(--transition);
     padding-top: 1rem;
     padding-bottom: 1rem;
     border-radius: 8px;
     color: white;
     background-color: rgb(204, 71, 71);
-
+    cursor: pointer;
 }
 
 .reg__fpass {
@@ -62,7 +70,49 @@ input {
     align-items: center;
 }
 
-/* .or */
+.or {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.or {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* text-align: center; */
+}
+
+.or p {
+    display: block;
+    margin-inline: 1rem;
+}
+
+.or:before {
+    content: '';
+    height: 1px;
+    width: 100%;
+    text-align: center;
+    left: 0;
+    border-top: 1px solid grey;
+    display: flex;
+    /* flex: 1; */
+
+}
+
+.or:after {
+    content: '';
+    height: 1px;
+    width: 100%;
+    text-align: center;
+    right: 0;
+    border-top: 1px solid grey;
+    display: flex;
+    /* flex: 1; */
+
+}
+
 
 
 
