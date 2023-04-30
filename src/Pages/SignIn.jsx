@@ -1,12 +1,17 @@
-
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { AiFillEye } from 'react-icons/ai'
 import { AiFillEyeInvisible } from 'react-icons/ai'
 import './Signin.css'
 import GoogleOauth from '../components/GoogleOauth'
 import { Link } from 'react-router-dom'
+import { signInWithEmailAndPassword } from 'firebase/auth'
+import { auth } from '../firebase'
+import { toast } from 'react-toastify'
 
 const SignIn = () => {
+
+    const navigate = useNavigate()
 
     const [formData, setFormData] = useState({
         email: "",
@@ -23,8 +28,21 @@ const SignIn = () => {
 
     const [showPassword, setShowPassword] = useState(false);
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
+
+        try {
+            const userCredentials = await signInWithEmailAndPassword(auth, email, password)
+            const user = userCredentials.user;
+            // console.log(user);
+            if (user) {
+                navigate("/")
+            }
+
+
+        } catch (error) {
+            toast.error("Sign In Error")
+        }
 
     }
 
@@ -65,7 +83,7 @@ const SignIn = () => {
                                     <Link to="/sign-up">Register</Link>
                                 </p>
 
-                                <Link to="/forget-password"> Forget Password </Link>
+                                <Link to="/forgot-password"> Forget Password </Link>
                             </div>
 
                             <div className="or">

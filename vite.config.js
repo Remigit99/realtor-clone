@@ -5,3 +5,10 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
 })
+
+// const dotenv = require('dotenv');
+// const env = dotenv.config().parsed;
+
+// module.exports = {
+//   env
+// }

@@ -4,10 +4,11 @@ import Home from './Pages/Homes';
 import Profile from './Pages/Profile';
 import Offers from './Pages/Offers'
 import SignIn from './Pages/SignIn'
-import SignOut from './Pages/SignOut'
+import SignUp from './Pages/SignUp'
 import ForgotPassword from './Pages/ForgetPassword';
 import NavBar from './components/NavBar/NavBar';
-
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const App = () => {
 
@@ -20,9 +21,22 @@ const App = () => {
         <Route path="profile" element={<Profile />} />
         <Route path="offers" element={<Offers />} />
         <Route path="sign-in" element={<SignIn />} />
-        <Route path="sign-out" element={<SignOut />} />
+        <Route path="sign-up" element={<SignUp />} />
         <Route path="forgot-password" element={<ForgotPassword />} />
       </Routes>
+
+      <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
 
     </div>
   )

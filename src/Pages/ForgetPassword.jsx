@@ -5,7 +5,7 @@ import './Signin.css'
 import GoogleOauth from '../components/GoogleOauth'
 import { Link } from 'react-router-dom'
 
-const SignIn = () => {
+const ForgetPassword = () => {
 
     const [formData, setFormData] = useState({
         email: " "
@@ -25,9 +25,9 @@ const SignIn = () => {
     }
 
     return (
-        <section>
+        <div>
             <div className="container signin__container">
-                <h1>Sign In</h1>
+                <h1>Forget Password</h1>
 
                 <div className="signin__main">
                     <div className="signin__left">
@@ -38,7 +38,7 @@ const SignIn = () => {
                         <form onSubmit={handleSubmit}>
                             <input type="email" name="email" id="email" placeholder='Email address' value={email} onChange={inputChange} />
 
-                            <button type="submit"> RESET PASSWORD</button>
+                            <button type="submit" className='btn-s'> RESET PASSWORD</button>
 
                             <div className="reg__fpass">
                                 <p>
@@ -46,10 +46,9 @@ const SignIn = () => {
                                     <Link to="/sign-up">Register</Link>
                                 </p>
 
-                                <Link to="/forget-password" />
                             </div>
 
-                            <div className="divide">
+                            <div className="or">
                                 <p>OR</p>
                             </div>
 
@@ -62,8 +61,8 @@ const SignIn = () => {
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
     )
 }
 
-export default SignIn
+export default ForgetPassword;
