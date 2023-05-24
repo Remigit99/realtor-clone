@@ -114,7 +114,52 @@ input {
 }
 
 
+/*=========== Profile Page =========*/
 
+#profile {
+    width: 75%;
+    margin: 0 auto;
+}
+
+#profile h1 {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.profile__container form {
+    padding: 0 10rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.edit__out {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    padding: 0 1rem;
+    font-weight: 500;
+}
+
+.edit__name span {
+    color: var(--color-red1);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.edit__name span:hover {
+    color: brown;
+}
+
+.sign-out {
+    color: var(--color-blue);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.sign-out:hover {
+    color: var(--color-blue2);
+}
 
 @media screen and (max-width: 34em) {
 

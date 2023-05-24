@@ -24,6 +24,8 @@ const SignIn = () => {
         setFormData(prev => ({
             ...prev, [e.target.id]: e.target.value
         }))
+
+        // setFormData({})
     }
 
     const [showPassword, setShowPassword] = useState(false);

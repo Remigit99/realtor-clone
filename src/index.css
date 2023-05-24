@@ -19,6 +19,8 @@
   --color-black: rgb(39, 39, 39);
   --color-red1: rgb(196, 43, 43);
   --color-red2: rgb(180, 47, 47);
+  --color-blue: rgb(70, 70, 194);
+  --color-blue2: rgb(104, 104, 209);
 
   /*=========== Devices Width ===========*/
   --lg-container-width: 80%;
